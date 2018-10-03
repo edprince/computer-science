@@ -1,0 +1,25 @@
+
+{
+	"courses": [
+		{
+			"code": "cs",
+			"title": "Computer Science MSci/BSc (Hons)"
+		},
+		{
+			"code": "com",
+			"title": "Computing BSc (Hons)"
+		},
+		{
+			"code": "ehns",
+			"title": "Ethical Hacking and Cybersecurity MSci/BSc (Hons)"
+		},
+		{
+			"code": "gt",
+			"title": "Games Technology BSc (Hons)"
+		},
+		{
+			"code": "itb",
+			"title": "Information Technology for Business BSc (Hons)"
+		}
+	]
+}

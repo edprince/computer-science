@@ -1,0 +1,17 @@
+<div class="card"> 
+  <p>The following books will help you in this module:</p>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>ISBN</th>
+      <th>Amazon link</th>
+    </tr>
+    {{#each books}}
+    <tr>
+      <td><a href="/details/{{this.id}}">{{this.title}}</a></td>
+      <td>{{this.isbn}}</td>
+      <td><a href="https://www.amazon.co.uk/gp/search/ref=sr_adv_b/?search-alias=stripbooks&field-isbn={{this.isbn}}">Buy</a></td>
+    </tr>
+    {{/each}}
+  </table>
+</div>
