@@ -1,2 +1,7 @@
 <h2>You Submitted...</h2>
-<pre>{{body}}</pre>
+<ul>
+  {{#each body}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
+<a href="/register">Return</a>

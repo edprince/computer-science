@@ -20,15 +20,32 @@ const port = 8080;
 
 app.get("/register", (req, res) => {
   var courses = JSON.parse(fs.readFileSync("public/courses.json", "utf8"));
-  console.log(courses);
-  res.render("register", { data: courses });
+  res.render("register", { courses: courses.courses });
 });
 
 app.post("/register", (req, res) => {
-  const formData = JSON.stringify(req.body, null, 2);
-  console.log(formData);
-  const data = { body: formData };
-  res.render("datapage", data);
+  //const formData = JSON.stringify(req.body, null, 2);
+  var formData = req.body;
+  console.log(typeof formData);
+  var data = [
+    formData.name,
+    formData.email,
+    formData.gender,
+    formData.dob,
+    formData.address1,
+    formData.address2,
+    formData.city,
+    formData.postcode,
+    formData.course,
+    formData.tandc,
+    formData.username,
+    formData.password,
+    formData.confirm,
+    formData.formtype
+  ];
+
+  //const data = { body: formData };
+  res.render("datapage", { body: data });
 });
 
 app.listen(port, () => console.log(`app listening on port ${port}`));
